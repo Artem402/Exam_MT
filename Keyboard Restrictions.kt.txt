@@ -1,0 +1,4 @@
+android:inputType="phone"
+android:inputType="date"
+android:inputType="numberDecimal"
+android:inputType="textCapCharacters

@@ -1,0 +1,14 @@
+fun onChangeLanguageClick(view: View) {
+        val currentLocale = resources.configuration.locale
+        val newLocale =
+            if (currentLocale == Locale.forLanguageTag("uk")) Locale.forLanguageTag("pl") else Locale.forLanguageTag("uk")
+        updateLocale(newLocale)
+        recreate()
+    }
+    private fun updateLocale(locale: Locale) {
+        val config = resources.configuration
+        config.setLocale(locale)
+        baseContext.resources.updateConfiguration(
+            config,
+            baseContext.resources.displayMetrics)
+    }
